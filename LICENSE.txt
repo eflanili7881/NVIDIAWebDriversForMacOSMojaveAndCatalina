@@ -1,5 +1,9 @@
 Copyright (c) 2020-2024 Dhinak G, Mykola Grymalyuk, and individual contributors.
+Copyright (c) 2017-2021, Apple.inc
+Copyright (c) 2020-2021, ASentientBot
+Copyright (c) 2019-2021, dosdude1
+Copyright (c) 2021, Khronokernel
 
-All rights reserved.
+All rights reserved to respective authors.
 
 This product includes software developed by Dortania and OpenCore Legacy Patcher contributors.
