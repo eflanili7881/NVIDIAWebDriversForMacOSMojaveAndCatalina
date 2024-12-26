@@ -17,6 +17,7 @@ Required files and instructions for installing NVIDIA Web Drivers on macOS Mojav
 - [Apple](https://www.apple.com) for macOS and many of the kexts, frameworks and other binaries.
 I'm sorry if I forgot to mention other contributors on OCLP and PatcherSupportPkg about NVIDIA Web Drivers.
 - [NVIDIA](https://www.nvidia.com) for creating NVIDIA Web Drivers.
+- And other contributors that I forgot to mention.
 
 ## Story of creation of this repo
 I used NVIDIA GPU's (GT 630 and GTX 1050 Ti) with Sierra and High Sierra during Mojave, Catalina, Big Sur and Monterey eras. NGL, I felt a bit jealous while AMD and Intel iGPU users using most up-to-date OS'. But legends ([Khronokernel](https://github.com/Khronokernel), [DhinakG](https://github.com/DhinakG) and all other legends) made NVIDIA Web Drivers able to run on newer OS' but only on Big Sur and above with OCLP 0.4.6. I viewed [this](https://www.reddit.com/r/hackintosh/comments/uxz95u/nvidia_web_drivers_running_on_macos_monterey/) Reddit post and [this](https://x.com/khronokernel/status/1529583832663437312) Twitter/X tweet/post
