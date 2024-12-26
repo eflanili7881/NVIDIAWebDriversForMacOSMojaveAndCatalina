@@ -1,0 +1,4 @@
+sudo /usr/bin/defaults write /Library/Preferences/.GlobalPreferences.plist InternalDebugUseGPUProcessForCanvasRenderingEnabled -bool false
+sudo /usr/bin/defaults write /Library/Preferences/.GlobalPreferences.plist WebKitExperimentalUseGPUProcessForCanvasRenderingEnabled -bool false
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.CoreDisplay useMetal -boolean no
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.CoreDisplay useIOP -boolean no
