@@ -1,0 +1,206 @@
+                "Non-Metal Common": {
+                    "Display Name": "",
+                    "OS Support": {
+                        "Minimum OS Support": {
+                            "OS Major": self.non_metal_os_support[0],
+                            "OS Minor": 0
+                        },
+                        "Maximum OS Support": {
+                            "OS Major": self.non_metal_os_support[-1],
+                            "OS Minor": 99
+                        },
+                    },
+                    "Install": {
+                        "/System/Library/Extensions": {
+                            "IOSurface.kext": "10.15.7",
+                        },
+                        "/System/Library/Frameworks": {
+                            "OpenGL.framework":       "10.14.3",
+                            "CoreDisplay.framework": f"10.14.4-{self.os_major}",
+                            "IOSurface.framework":   f"10.15.7-{self.os_major}",
+                            "QuartzCore.framework":  f"10.15.7-{self.os_major}",
+                        },
+                        "/System/Library/PrivateFrameworks": {
+                            "GPUSupport.framework": "10.14.3",
+                            "SkyLight.framework":  f"10.14.6-{self.os_major}"
+                        },
+                    },
+                    "Remove": {
+                        "/System/Library/Extensions": [
+                            "AMDRadeonX4000.kext",
+                            "AMDRadeonX4000HWServices.kext",
+                            "AMDRadeonX5000.kext",
+                            "AMDRadeonX5000HWServices.kext",
+                            "AMDRadeonX6000.kext",
+                            "AMDRadeonX6000Framebuffer.kext",
+                            "AMDRadeonX6000HWServices.kext",
+                            "AppleIntelBDWGraphics.kext",
+                            "AppleIntelBDWGraphicsFramebuffer.kext",
+                            "AppleIntelCFLGraphicsFramebuffer.kext",
+                            "AppleIntelHD4000Graphics.kext",
+                            "AppleIntelHD5000Graphics.kext",
+                            "AppleIntelICLGraphics.kext",
+                            "AppleIntelICLLPGraphicsFramebuffer.kext",
+                            "AppleIntelKBLGraphics.kext",
+                            "AppleIntelKBLGraphicsFramebuffer.kext",
+                            "AppleIntelSKLGraphics.kext",
+                            "AppleIntelSKLGraphicsFramebuffer.kext",
+                            "AppleIntelFramebufferAzul.kext",
+                            "AppleIntelFramebufferCapri.kext",
+                            "AppleParavirtGPU.kext",
+                            "GeForce.kext",
+                            "IOAcceleratorFamily2.kext",
+                            "IOGPUFamily.kext",
+                            "AppleAfterburner.kext",
+                        ],
+                    },
+                    "Processes": {
+                        # 'When Space Allows' option introduced in 12.4 (XNU 21.5)
+                        "/usr/bin/defaults write /Library/Preferences/.GlobalPreferences.plist InternalDebugUseGPUProcessForCanvasRenderingEnabled -bool false": True,
+                        "/usr/bin/defaults write /Library/Preferences/.GlobalPreferences.plist WebKitExperimentalUseGPUProcessForCanvasRenderingEnabled -bool false": True
+                    },
+                },
+                "Non-Metal IOAccelerator Common": {
+                    # TeraScale 2 and Nvidia Web Drivers broke in Mojave due to mismatched structs in
+                    # the IOAccelerator stack
+                    "Display Name": "",
+                    "OS Support": {
+                        "Minimum OS Support": {
+                            "OS Major": self.non_metal_os_support[0],
+                            "OS Minor": 0
+                        },
+                        "Maximum OS Support": {
+                            "OS Major": self.non_metal_os_support[-1],
+                            "OS Minor": 99
+                        },
+                    },
+                    "Install": {
+                        "/System/Library/Extensions": {
+                            "IOAcceleratorFamily2.kext":     "10.13.6",
+                            "IOSurface.kext":                "10.14.6",
+                        },
+                        "/System/Library/Frameworks": {
+                            "IOSurface.framework": f"10.14.6-{self.os_major}",
+                            "OpenCL.framework":     "10.13.6",
+                        },
+                        "/System/Library/PrivateFrameworks": {
+                            "GPUSupport.framework":     "10.13.6",
+                            "IOAccelerator.framework": f"10.13.6-{self.os_major}",
+                        },
+                    },
+                    "Remove": {
+                        "/System/Library/Extensions": [
+                            "AppleCameraInterface.kext"
+                        ],
+                    },
+                },
+
+                "Non-Metal CoreDisplay Common": {
+                    # Nvidia Web Drivers require an older build of CoreDisplay
+                    "Display Name": "",
+                    "OS Support": {
+                        "Minimum OS Support": {
+                            "OS Major": self.non_metal_os_support[0],
+                            "OS Minor": 0
+                        },
+                        "Maximum OS Support": {
+                            "OS Major": self.non_metal_os_support[-1],
+                            "OS Minor": 99
+                        },
+                    },
+                    "Install": {
+                        "/System/Library/Frameworks": {
+                            "CoreDisplay.framework": f"10.13.6-{self.os_major}",
+                        },
+                    },
+                },
+
+                "Non-Metal Enforcement": {
+                    # Forces Metal kexts from High Sierra to run in the fallback non-Metal mode
+                    # Verified functional with HD4000 and Iris Plus 655
+                    # Only used for internal development purposes, not suitable for end users
+
+                    # Note: Metal kexts in High Sierra rely on IOAccelerator, thus 'Non-Metal IOAccelerator Common'
+                    # is needed for proper linking
+                    "Display Name": "",
+                    "OS Support": {
+                        "Minimum OS Support": {
+                            "OS Major": self.non_metal_os_support[0],
+                            "OS Minor": 0
+                        },
+                        "Maximum OS Support": {
+                            "OS Major": self.non_metal_os_support[-1],
+                            "OS Minor": 99
+                        },
+                    },
+                    "Processes": {
+                        "/usr/bin/defaults write /Library/Preferences/com.apple.CoreDisplay useMetal -boolean no": True,
+                        "/usr/bin/defaults write /Library/Preferences/com.apple.CoreDisplay useIOP -boolean no":   True,
+                    },
+                },
+
+                "Nvidia Web Drivers": {
+                    "Display Name": "Graphics: Nvidia Web Drivers",
+                    "OS Support": {
+                        "Minimum OS Support": {
+                            "OS Major": os_data.os_data.mojave,
+                            "OS Minor": 0
+                        },
+                        "Maximum OS Support": {
+                            "OS Major": os_data.os_data.max_os,
+                            "OS Minor": 99
+                        },
+                    },
+                    "Install": {
+                        "/System/Library/Extensions": {
+                            "GeForceAIRPluginWeb.bundle":     "WebDriver-387.10.10.10.40.140",
+                            "GeForceGLDriverWeb.bundle":      "WebDriver-387.10.10.10.40.140",
+                            "GeForceMTLDriverWeb.bundle":     "WebDriver-387.10.10.10.40.140",
+                            "GeForceVADriverWeb.bundle":      "WebDriver-387.10.10.10.40.140",
+
+                            # Tesla-only files
+                            "GeForceTeslaGAWeb.bundle":       "WebDriver-387.10.10.10.40.140",
+                            "GeForceTeslaGLDriverWeb.bundle": "WebDriver-387.10.10.10.40.140",
+                            "GeForceTeslaVADriverWeb.bundle": "WebDriver-387.10.10.10.40.140",
+                        },
+                        "/System/Library/PrivateFrameworks": {
+                            # Restore OpenCL by adding missing compiler files
+                            **({ "GPUCompiler.framework": "11.6"} if self.os_major >= os_data.os_data.monterey else {}),
+                        },
+                    },
+                    "Install Non-Root": {
+                        "/Library/Extensions": {
+                            "GeForceWeb.kext":                "WebDriver-387.10.10.10.40.140",
+                            "NVDAGF100HalWeb.kext":           "WebDriver-387.10.10.10.40.140",
+                            "NVDAGK100HalWeb.kext":           "WebDriver-387.10.10.10.40.140",
+                            "NVDAGM100HalWeb.kext":           "WebDriver-387.10.10.10.40.140",
+                            "NVDAGP100HalWeb.kext":           "WebDriver-387.10.10.10.40.140",
+                            "NVDAResmanWeb.kext":             "WebDriver-387.10.10.10.40.140",
+                            "NVDAStartupWeb.kext":            "WebDriver-387.10.10.10.40.140",
+
+                            # Tesla-only files
+                            "GeForceTeslaWeb.kext":           "WebDriver-387.10.10.10.40.140",
+                            "NVDANV50HalTeslaWeb.kext":       "WebDriver-387.10.10.10.40.140",
+                            "NVDAResmanTeslaWeb.kext":        "WebDriver-387.10.10.10.40.140",
+                        },
+
+                        # Disabled due to issues with Pref pane stripping 'nvda_drv' NVRAM
+                        # variables
+                        # "/Library/PreferencePanes": {
+                        #     "NVIDIA Driver Manager.prefPane": "WebDriver-387.10.10.10.40.140",
+                        # },
+                        #  "/Library/LaunchAgents": {
+                        #     "com.nvidia.nvagent.plist":       "WebDriver-387.10.10.10.40.140",
+                        # },
+                        # "/Library/LaunchDaemons": {
+                        #     "com.nvidia.nvroothelper.plist":  "WebDriver-387.10.10.10.40.140",
+                        # },
+                    },
+                    "Remove": {
+                        "/System/Library/Extensions": [
+                            # Due to how late the Auxiliary cache loads, NVDAStartup will match first and then the Web Driver kexts.
+                            # This has no effect for Maxwell and Pascal, however for development purposes, Tesla and Kepler are partially supported.
+                            "NVDAStartup.kext",
+                        ],
+                    },
+                },
