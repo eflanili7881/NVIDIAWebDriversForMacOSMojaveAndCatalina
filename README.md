@@ -48,10 +48,10 @@ macOS Catalina 10.15.7 Security Update 2022-005 build 19H2026
 - Enable NVIDIA Web Drivers via:
   - nvda_drv_vrl=1 boot argument
 - Set your SIP to 0xa03.
-  - CSR_ALLOW_UNTRUSTED_KEXTS
-  - CSR_ALLOW_UNRESTRICTED_FS
-  - CSR_ALLOW_UNAPPROVED_KEXTS
-  - CSR_ALLOW_UNAUTHENTICATED_ROOT
+  - CSR_ALLOW_UNTRUSTED_KEXTS (0x1)
+  - CSR_ALLOW_UNRESTRICTED_FS (0x2)
+  - CSR_ALLOW_UNAPPROVED_KEXTS (0x200)
+  - CSR_ALLOW_UNAUTHENTICATED_ROOT (0x800)
 - Install Lilu from [here](https://github.com/acidanthera/Lilu).
 - Install WhateverGreen from [here](https://github.com/acidanthera/WhateverGreen).
 - Download this repo contents via **Code>Download ZIP**.
@@ -63,3 +63,5 @@ macOS Catalina 10.15.7 Security Update 2022-005 build 19H2026
   - On Catalina, run **sudo mount -uw /** to mount root filesystem as read-write.
 - After you copied files, run **sudo kextcache -i /** to rebuild kext cache.
 - Reboot your system.
+
+After these instructions, you should get hardware acceleration in non-Metal mode on macOS Mojave and Catalina. But because of the system now runs on non-Metal (OpenGL) mode, bugs on OCLP issues [#108](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/108) may occur.
