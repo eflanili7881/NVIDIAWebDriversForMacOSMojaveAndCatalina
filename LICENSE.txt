@@ -1,0 +1,5 @@
+Copyright (c) 2020-2024 Dhinak G, Mykola Grymalyuk, and individual contributors.
+
+All rights reserved.
+
+This product includes software developed by Dortania and OpenCore Legacy Patcher contributors.
