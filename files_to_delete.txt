@@ -1,29 +1,27 @@
-"/System/Library/Extensions": [
-    "AMDRadeonX4000.kext",
-    "AMDRadeonX4000HWServices.kext",
-    "AMDRadeonX5000.kext",
-    "AMDRadeonX5000HWServices.kext",
-    "AMDRadeonX6000.kext",
-    "AMDRadeonX6000Framebuffer.kext",
-    "AMDRadeonX6000HWServices.kext",
-    "AppleIntelBDWGraphics.kext",
-    "AppleIntelBDWGraphicsFramebuffer.kext",
-    "AppleIntelCFLGraphicsFramebuffer.kext",
-    "AppleIntelHD4000Graphics.kext",
-    "AppleIntelHD5000Graphics.kext",
-    "AppleIntelICLGraphics.kext",
-    "AppleIntelICLLPGraphicsFramebuffer.kext",
-    "AppleIntelKBLGraphics.kext",
-    "AppleIntelKBLGraphicsFramebuffer.kext",
-    "AppleIntelSKLGraphics.kext",
-    "AppleIntelSKLGraphicsFramebuffer.kext",
-    "AppleIntelFramebufferAzul.kext",
-    "AppleIntelFramebufferCapri.kext",
-    "AppleParavirtGPU.kext",
-    "GeForce.kext",
-    "IOAcceleratorFamily2.kext",
-    "IOGPUFamily.kext",
-    "AppleAfterburner.kext",
-    "AppleCameraInterface.kext"
-    "NVDAStartup.kext"
-]
+/System/Library/Extensions/AMDRadeonX4000.kext
+/System/Library/Extensions/AMDRadeonX4000HWServices.kext
+/System/Library/Extensions/AMDRadeonX5000.kext
+/System/Library/Extensions/AMDRadeonX5000HWServices.kext
+/System/Library/Extensions/AMDRadeonX6000.kext
+/System/Library/Extensions/AMDRadeonX6000Framebuffer.kext
+/System/Library/Extensions/AMDRadeonX6000HWServices.kext
+/System/Library/Extensions/AppleIntelBDWGraphics.kext
+/System/Library/Extensions/AppleIntelBDWGraphicsFramebuffer.kext
+/System/Library/Extensions/AppleIntelCFLGraphicsFramebuffer.kext
+/System/Library/Extensions/AppleIntelHD4000Graphics.kext
+/System/Library/Extensions/AppleIntelHD5000Graphics.kext
+/System/Library/Extensions/AppleIntelICLGraphics.kext
+/System/Library/Extensions/AppleIntelICLLPGraphicsFramebuffer.kext
+/System/Library/Extensions/AppleIntelKBLGraphics.kext
+/System/Library/Extensions/AppleIntelKBLGraphicsFramebuffer.kext
+/System/Library/Extensions/AppleIntelSKLGraphics.kext
+/System/Library/Extensions/AppleIntelSKLGraphicsFramebuffer.kext
+/System/Library/Extensions/AppleIntelFramebufferAzul.kext
+/System/Library/Extensions/AppleIntelFramebufferCapri.kext
+/System/Library/Extensions/AppleParavirtGPU.kext
+/System/Library/Extensions/GeForce.kext
+/System/Library/Extensions/IOAcceleratorFamily2.kext
+/System/Library/Extensions/IOGPUFamily.kext
+/System/Library/Extensions/AppleAfterburner.kext
+/System/Library/Extensions/AppleCameraInterface.kext
+/System/Library/Extensions/NVDAStartup.kext
