@@ -6,7 +6,7 @@ Required files and instructions for installing NVIDIA Web Drivers on macOS Mojav
   - Main co-author of OCLP software.
 - [DhinakG](https://github.com/DhinakG)
   - Main co-author of OCLP software.
-- [ASentientBot](https://github.com/ASentientBot) for Mojave, Catalina Graphics Acceleration Patches.
+- [ASentientBot](https://github.com/ASentientBot) for Mojave and Catalina Graphics Acceleration Patches.
 - [dosdude1](https://github.com/dosdude1) for Mojave and Catalina Graphics Acceleration Patches.
 - [EduCovas](https://github.com/covasedu) for [non-Metal patch set](https://github.com/moraea/non-metal-frameworks) for NVIDIA Tesla/Fermi/Maxwell/Pascal.
 - [ASentientHedgehog](https://github.com/moosethegoose2213) for [non-Metal patch set](https://github.com/moraea/non-metal-frameworks) for NVIDIA Tesla/Fermi/Maxwell/Pascal.
