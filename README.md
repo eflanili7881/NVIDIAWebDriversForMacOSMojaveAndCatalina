@@ -20,7 +20,7 @@ I'm sorry if I forgot to mention other contributors on OCLP and PatcherSupportPk
 - And other contributors that I forgot to mention.
 
 ## Story of creation of this repo
-I used NVIDIA GPU's (GT 630 and GTX 1050 Ti) with Sierra and High Sierra during Mojave, Catalina, Big Sur and Monterey eras. NGL, I felt a bit jealous while AMD and Intel iGPU users using most up-to-date OS'. But legends ([Khronokernel](https://github.com/Khronokernel), [DhinakG](https://github.com/DhinakG) and all other legends) made NVIDIA Web Drivers able to run on newer OS' but only on Big Sur and above with OCLP 0.4.6. I viewed [this](https://www.reddit.com/r/hackintosh/comments/uxz95u/nvidia_web_drivers_running_on_macos_monterey/) Reddit post and [this](https://x.com/khronokernel/status/1529583832663437312) Twitter/X tweet/post
+I used NVIDIA GPU's (GT 630 and GTX 1050 Ti) with Sierra and High Sierra during Mojave, Catalina, Big Sur and Monterey eras. NGL, I felt a bit jealous while AMD and Intel iGPU users using most up-to-date OS'. But legends ([Khronokernel](https://github.com/Khronokernel), [DhinakG](https://github.com/DhinakG) and all other legends) made NVIDIA Web Drivers able to run on newer OS' but only on Big Sur and above with OCLP 0.4.6. And you know that patch support for Mojave and Catalina was removed on OCLP 0.4.4 and last version for patching Mojave and Catalina was 0.4.3 which is not contain patch for NVIDIA Web Drivers. I viewed [this](https://www.reddit.com/r/hackintosh/comments/uxz95u/nvidia_web_drivers_running_on_macos_monterey/) Reddit post and [this](https://x.com/khronokernel/status/1529583832663437312) Twitter/X tweet/post.
 
 But when I checked OCLP pull [#993](https://github.com/dortania/OpenCore-Legacy-Patcher/pull/993), I saw this:
 
@@ -30,11 +30,13 @@ Do you see what I see? There's 10.14.3 which stands for macOS Mojave build numbe
 
 After that, I started investigating this. I tried installing NVIDIA Web Drivers before on Catalina test system but due to I unpacked some *.framework files on Windows, I borked that Catalina test install. But on December 18, I tried this again, but unpacking all files on macOS itself instead, and guess what? I patched OS' finally to run NVIDIA Web Drivers with non-Metal mode just like on Big Sur and above on Mojave and Catalina!
 
-macOS Mojave 10.14.6 Security Update 2021-005 build 18G9323 
-![IMG_20241218_224255](https://github.com/user-attachments/assets/226b895f-7319-4bd2-9b8e-8e9c8a6ca89c)
+- macOS Mojave 10.14.6 Security Update 2021-005 build 18G9323 
 
-macOS Catalina 10.15.7 Security Update 2022-005 build 19H2026
-![IMG_20241218_224618](https://github.com/user-attachments/assets/239bd4c3-cd9f-41a6-97a1-3fd2d7f0b99f)
+  ![IMG_20241218_224255](https://github.com/user-attachments/assets/226b895f-7319-4bd2-9b8e-8e9c8a6ca89c)
+
+- macOS Catalina 10.15.7 Security Update 2022-005 build 19H2026
+
+  ![IMG_20241218_224618](https://github.com/user-attachments/assets/239bd4c3-cd9f-41a6-97a1-3fd2d7f0b99f)
 
 ## Instructions
 - Disable Library Validation via:
@@ -53,14 +55,14 @@ macOS Catalina 10.15.7 Security Update 2022-005 build 19H2026
   - CSR_ALLOW_UNRESTRICTED_FS (0x2)
   - CSR_ALLOW_UNAPPROVED_KEXTS (0x200)
   - CSR_ALLOW_UNAUTHENTICATED_ROOT (0x800)
-- Install Lilu from [here](https://github.com/acidanthera/Lilu).
-- Install WhateverGreen from [here](https://github.com/acidanthera/WhateverGreen).
+- Install or update Lilu from [here](https://github.com/acidanthera/Lilu).
+- Install or update WhateverGreen from [here](https://github.com/acidanthera/WhateverGreen).
 - Download this repo contents via **Code>Download ZIP**.
 - Run commands thats inside on **commands.txt**.
 - Remove necessary files thats inside on **files_to_delete.txt**.
   - If files missing, don't worry. Just delete files that just exists.
   - On Catalina, run **sudo mount -uw /** to mount root filesystem as read-write.
-- Copy all files from **copy_mojave** or **copy_catalina** to root filesystem.
+- Copy all files from **copy_mojave** or **copy_catalina** that depends to your currently OS version you want to patch to root filesystem.
   - On Catalina, run **sudo mount -uw /** to mount root filesystem as read-write.
 - After you copied files, run **sudo kextcache -i /** to rebuild kext cache.
 - Reboot your system.
