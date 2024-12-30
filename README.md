@@ -52,9 +52,13 @@ After that, I started investigating this. I tried installing NVIDIA Web Drivers 
   - `nvda_drv_vrl=1` boot argument
 - Set your SIP (**S**ystem **I**ntegrity **P**rotection) level to **0xa03**.
   - `CSR_ALLOW_UNTRUSTED_KEXTS` (0x1)
+    - Allows unsigned kernel drivers to be installed and loaded.
   - `CSR_ALLOW_UNRESTRICTED_FS` (0x2)
+    - Allows unrestricted file system access.
   - `CSR_ALLOW_UNAPPROVED_KEXTS` (0x200)
+    - Allows unapproved kernel driver installation/loading.
   - `CSR_ALLOW_UNAUTHENTICATED_ROOT` (0x800)
+    - Allows custom APFS snapshots to be booted (primarily for modified root volumes).
     - Not necessary on Mojave and Catalina, but patches may somehow require this bit. You can omit it if you want.
       - So, new value for SIP is **0x203** (against **0xa03**) if you omit this bit.
 - Install or update Lilu from [here](https://github.com/acidanthera/Lilu).
