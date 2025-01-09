@@ -28,7 +28,7 @@ But when I checked OCLP pull [#993](https://github.com/dortania/OpenCore-Legacy-
 
 Do you see what I see? There's 10.14.3 which stands for macOS Mojave build number. A Maxwell-based NVIDIA GPU ran on macOS Mojave 10.14.3 which is tested by legend [Khronokernel](https://github.com/Khronokernel) itself.
 
-After that, I started investigating this. I tried installing NVIDIA Web Drivers before on Catalina test system, but due to I unpacked some *.framework files on Windows, I borked that Catalina test install due to borked symbolic links thats caused by extracted these files on Windows. But on date 18th December 2024, I tried this again, but unpacking all files on macOS itself instead, and guess what? I patched OS' finally to run NVIDIA Web Drivers with non-Metal mode just like on Big Sur and above on Mojave and Catalina!
+After that, I started investigating this. I took necessary files to copy and commands list to run from old version of OCLP and put these files and commands on [patchlist_for_web_drivers.txt](https://github.com/eflanili7881/NVIDIAWebDriversForMacOSMojaveAndCatalina/blob/main/patchlist_for_web_drivers.txt). I tried installing NVIDIA Web Drivers long before on Catalina test system, but due to I unpacked some *.framework files on Windows, I borked that Catalina test install due to borked symbolic links thats caused by extracted these files on Windows. But on date 18th December 2024, I tried this again, but unpacking all files on macOS itself instead, and guess what? I patched OS' finally to run NVIDIA Web Drivers with non-Metal mode just like on Big Sur and above on Mojave and Catalina!
 
 - macOS Mojave 10.14.6 Security Update 2021-005 build 18G9323 
 
