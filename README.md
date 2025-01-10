@@ -89,7 +89,7 @@ After that, I started investigating this. I took necessary files to copy and com
   - If files missing, don't worry. Just delete files that just exists.
 - Copy all files from **copy_mojave** or **copy_catalina** that depends to your currently OS version you want to patch to root filesystem.
   - On Catalina, run `sudo mount -uw /` to mount root filesystem as read-write.
-  - Optionally, you can run `sudo chown root:wheel` and `sudo chmod 755` per file. I didn't do that but kexts and frameworks are still loaded.
+  - Optionally, you can run `sudo chown root:wheel` and `sudo chmod 755` per file after you copied files to appropriate locations. I didn't do that but kexts and frameworks are still loaded. Maybe they're automatically set owner/group and permission octal values by macOS itself or by reducing level of SIP.
   - I recommend you to copy files via `sudo cp -R <pathOfcopy_mojaveOrcopy_catalina>/* /`
     - Example for Catalina
       - `sudo cp -R /Volumes/Untitled/copy_catalina/* /`
