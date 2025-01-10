@@ -1,6 +1,9 @@
 # NVIDIA Web Drivers for macOS Mojave and Catalina
 Required files and instructions for installing NVIDIA Web Drivers on macOS Mojave and Catalina
 
+All required files taken from [PatcherSupportPkg](https://github.com/dortania/PatcherSupportPkg) repo on 18th December 2024.
+You can go there if the patches are updated. Just take files listed on [here](https://github.com/eflanili7881/NVIDIAWebDriversForMacOSMojaveAndCatalina/blob/main/patchlist_for_web_drivers.txt).
+
 ## Credits
 - [Khronokernel](https://github.com/Khronokernel)
   - Main co-author of OCLP software.
