@@ -3,6 +3,7 @@ Required files and instructions for installing NVIDIA Web Drivers on macOS Mojav
 
 All required files taken from [PatcherSupportPkg](https://github.com/dortania/PatcherSupportPkg) repo on 18th December 2024 and organized for directly copying from Terminal in one go.
 You can go there if the patches are updated. Just take files listed on [here](https://github.com/eflanili7881/NVIDIAWebDriversForMacOSMojaveAndCatalina/blob/main/patchlist_for_web_drivers.txt).
+These files are here solely for archival purposes.
 
 ## Credits
 - [Khronokernel](https://github.com/Khronokernel)
