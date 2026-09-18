@@ -29,7 +29,7 @@ I used NVIDIA GPU's (GT 630 and GTX 1050 Ti) with Sierra and High Sierra during 
 
 But when I checked OCLP pull [#993](https://github.com/dortania/OpenCore-Legacy-Patcher/pull/993), I saw this:
 
-![image](https://github.com/user-attachments/assets/d5f55737-01fc-43dd-9d8f-f88363c20de0)
+![image](./pictures/398765589-d5f55737-01fc-43dd-9d8f-f88363c20de0.png)
 
 Do you see what I see? There's 10.14.3 which stands for macOS Mojave build number. A Maxwell-based NVIDIA GPU ran on macOS Mojave 10.14.3 which is tested by legend [Khronokernel](https://github.com/Khronokernel) itself.
 
@@ -37,11 +37,11 @@ After that, I started investigating this. I took necessary files to copy and com
 
 - macOS Mojave 10.14.6 Security Update 2021-005 build 18G9323 
 
-  ![image](https://github.com/user-attachments/assets/226b895f-7319-4bd2-9b8e-8e9c8a6ca89c)
+  ![image](./pictures/398767291-226b895f-7319-4bd2-9b8e-8e9c8a6ca89c.jpg)
 
 - macOS Catalina 10.15.7 Security Update 2022-005 build 19H2026
 
-  ![image](https://github.com/user-attachments/assets/239bd4c3-cd9f-41a6-97a1-3fd2d7f0b99f)
+  ![image](./pictures/398767248-239bd4c3-cd9f-41a6-97a1-3fd2d7f0b99f.jpg)
 
 ## Instructions
 - Disable Library Validation via:
