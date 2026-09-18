@@ -7,7 +7,6 @@ if self.hardware_details["Graphics: Nvidia Web Drivers"] is True:
     required_patches.update({"Nvidia Web Drivers": all_hardware_patchset["Graphics"]["Nvidia Web Drivers"]})
     required_patches.update({"Non-Metal Enforcement": all_hardware_patchset["Graphics"]["Non-Metal Enforcement"]})
 ====================================================================================================================================
-
                "Non-Metal Common": {
                     "Display Name": "",
                     "OS Support": {
